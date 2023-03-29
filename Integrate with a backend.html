@@ -1,0 +1,17 @@
+import axios from 'axios';
+
+function App() {
+  const [appointments, setAppointments] = useState([]);
+
+  useEffect(() => {
+    axios.get('/api/appointments')
+      .then(response => {
+        setAppointments(response.data);
+      })
+      .catch(error => {
+        console.error(error);
+      });
+  }, []);
+
+  // Render appointments in the calendar grid and event details section
+}

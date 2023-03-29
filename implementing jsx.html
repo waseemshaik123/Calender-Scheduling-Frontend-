@@ -1,0 +1,19 @@
+import React from 'react';
+import './App.css';
+import Header from './Header';
+import CalendarGrid from './CalendarGrid';
+import EventDetails from './EventDetails';
+
+function App() {
+  return (
+    <div className="App">
+      <Header />
+      <div className="main-content">
+        <CalendarGrid />
+        <EventDetails />
+      </div>
+    </div>
+  );
+}
+
+export default App;
